@@ -1,0 +1,326 @@
+*{
+    margin:0;
+    padding:0;
+    box-sizing:border-box;
+}
+
+body{
+
+    font-family:"Poppins",sans-serif;
+
+    overflow:hidden;
+
+    min-height:100vh;
+
+    display:flex;
+
+    justify-content:center;
+
+    align-items:center;
+
+    background:#09090f;
+
+}
+
+.background{
+
+    position:fixed;
+    inset:0;
+
+    background:
+
+    radial-gradient(circle at top,#4f46e5 0%,transparent 40%),
+
+    radial-gradient(circle at bottom,#ec4899 0%,transparent 35%),
+
+    #09090f;
+
+}
+
+.glass{
+
+    width:720px;
+
+    padding:50px;
+
+    border-radius:30px;
+
+    background:rgba(255,255,255,.08);
+
+    backdrop-filter:blur(30px);
+
+    border:1px solid rgba(255,255,255,.15);
+
+    box-shadow:
+
+    0 0 60px rgba(0,0,0,.45);
+
+    text-align:center;
+
+    z-index:2;
+
+    position: relative;
+
+}
+
+.gif{
+
+    width:220px;
+
+    margin-bottom:25px;
+
+}
+
+.badge{
+
+    display:inline-block;
+
+    padding:10px 20px;
+
+    border-radius:999px;
+
+    background:rgba(255,255,255,.12);
+
+    color:white;
+
+    margin-bottom:25px;
+
+}
+
+h1{
+
+    color:white;
+
+    font-size:40px;
+
+    margin-bottom:25px;
+
+}
+
+p{
+
+    color:#e4e4e4;
+
+    line-height:2;
+
+    font-size:18px;
+
+    min-height:180px;
+
+}
+
+.buttons{
+    position: relative;
+    display:flex;
+    justify-content:center;
+    gap:20px;
+    min-height:70px;
+}
+
+button{
+    border:none;
+    cursor:pointer;
+    border-radius:999px;
+    padding:18px 35px;
+    font-size:17px;
+    transition:.3s;
+}
+
+#nao{
+    background:#ef4444;
+    color:white;
+    position:fixed;
+    transition:none; /* faz ele teletransportar */
+}
+
+#sim{
+
+    margin-top: 30px;
+    background:#22c55e;
+
+    color:white;
+
+}
+
+#sim:hover{
+
+    transform:translateY(-4px);
+
+}
+
+#nao{
+    position: fixed;
+    background:#ef4444;
+    color:white;
+}
+
+/* =======================
+   BOTÃO DE MÚSICA
+======================= */
+
+#musicButton{
+
+    position:fixed;
+
+    top:25px;
+    right:25px;
+
+    padding:14px 20px;
+
+    border:none;
+
+    border-radius:50px;
+
+    background:rgba(255,255,255,.15);
+
+    backdrop-filter:blur(20px);
+
+    color:white;
+
+    cursor:pointer;
+
+    z-index:999;
+
+    transition:.3s;
+
+}
+
+#musicButton:hover{
+
+    transform:scale(1.05);
+
+}
+
+/* =======================
+   PARTÍCULAS
+======================= */
+
+.particle{
+
+    position:fixed;
+
+    width:4px;
+    height:4px;
+
+    border-radius:50%;
+
+    background:white;
+
+    opacity:.7;
+
+    animation:float linear forwards;
+
+}
+
+@keyframes float{
+
+    from{
+
+        transform:translateY(100vh);
+
+        opacity:0;
+
+    }
+
+    20%{
+
+        opacity:.7;
+
+    }
+
+    to{
+
+        transform:translateY(-120vh);
+
+        opacity:0;
+
+    }
+
+}
+
+/* =======================
+   CORAÇÕES DO MOUSE
+======================= */
+
+.mouseHeart{
+
+    position:fixed;
+
+    pointer-events:none;
+
+    font-size:18px;
+
+    animation:heartFade .9s forwards;
+
+}
+
+@keyframes heartFade{
+
+    from{
+
+        opacity:1;
+
+        transform:translateY(0) scale(1);
+
+    }
+
+    to{
+
+        opacity:0;
+
+        transform:translateY(-40px) scale(1.8);
+
+    }
+
+}
+
+/*==============================
+    ANIMAÇÕES DO CARD
+==============================*/
+
+.glass{
+
+    animation: aparecer .8s ease;
+
+}
+
+.glass.sumindo{
+
+    animation: sumir .7s ease forwards;
+
+}
+
+@keyframes aparecer{
+
+    from{
+
+        opacity:0;
+        transform:translateY(40px) scale(.95);
+
+    }
+
+    to{
+
+        opacity:1;
+        transform:translateY(0) scale(1);
+
+    }
+
+}
+
+@keyframes sumir{
+
+    to{
+
+        opacity:0;
+        transform:scale(.8);
+
+    }
+
+}
+
+
+/*==============================
+        BOTÃO NÃO
+==============================*/
+
