@@ -12,7 +12,9 @@ Você é meu porto seguro, minha paz e a pessoa com quem quero compartilhar todo
 
 Obrigado por existir.
 
-Eu te amo infinitamente. ❤️`;
+Eu te amo infinitamente. ❤️
+
+(depois que terminar de ver o site, pode entrar no seu quarto! Espero que goste da surpresa!!)`;
 
 const textoCarta = document.getElementById("textoCarta");
 const envelope = document.getElementById("envelope");
